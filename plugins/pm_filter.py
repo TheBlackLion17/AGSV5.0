@@ -416,7 +416,9 @@ async def zip_pressed(client: Client, query: CallbackQuery):
         try:
             shutil.rmtree(tmpdir)
         except Exception:
-            pass@Client.on_message(filters.group & filters.text & filters.incoming)
+            pass
+            
+            @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
     """
     Entry point when user types a text in group (search).
